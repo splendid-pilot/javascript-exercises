@@ -18,7 +18,7 @@ describe('${exerciseName}', () => {
     expect(${exerciseName}()).toBe('');
   });
   
-  test${isSolutionFile ? "" : ".skip"}('Second test description', () => {
+  test${isSolutionFile ? "" : ""}('Second test description', () => {
     // Replace this comment with any other necessary code, and update the expect line as necessary
 
     expect(${exerciseName}()).toBe('');

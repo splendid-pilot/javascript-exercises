@@ -3,19 +3,11 @@ const convertToCelsius = function (f) {
 };
 
 const convertToFahrenheit = function (c) {
-  let result = (c * 9) / 5 + 32;
-  return roundToOne(result);
+  return roundToOne((c * 9) / 5 + 32);
 };
-function roundToOne(num) {
-  let decimal = num - Math.floor(num);
-  console.log(
-    `num: ${num}, decimal: ${decimal} ${Math.floor(decimal * 10) / 10 + num}`,
-  );
-  if (decimal === 0) {
-    return num;
-  } else {
-    return Math.floor(decimal * 10) / 10 + Math.floor(num);
-  }
+function roundToOne(num, decimalPlaces = 1) {
+  num = Math.round(num + "e" + decimalPlaces);
+  return Number(num + "e" + -decimalPlaces);
 }
 
 // Do not edit below this line
