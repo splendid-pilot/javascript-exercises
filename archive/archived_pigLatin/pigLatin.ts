@@ -1,5 +1,4 @@
-"use strict";
-const pigLatin = (str) =>
+const pigLatin = (str: string): string =>
   str
     .split(" ")
     .map((word) => {
@@ -9,7 +8,8 @@ const pigLatin = (str) =>
       return `${ending}${beginning}ay`;
     })
     .join(" ");
-const firstVowelIndex = (str) => {
+
+const firstVowelIndex = (str: string): number => {
   const vowels = str.match(/[aeiou]/g);
   if (vowels == null) {
     return 0;
@@ -20,4 +20,5 @@ const firstVowelIndex = (str) => {
     return str.indexOf(vowels[0]);
   }
 };
+
 module.exports = pigLatin;
